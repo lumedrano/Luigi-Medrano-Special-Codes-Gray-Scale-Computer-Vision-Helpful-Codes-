@@ -1,0 +1,24 @@
+public void drive(double lfpower, double rfpower, double lrpower, double rrpower, int msec) throws InterruptedException{
+lf.setPower(lfpower);
+rf.setPower(rfpower);
+lr.setPower(lrpower);
+rr.setPower(rrpower);
+sleep(msec);
+lf.setPower(0);
+rf.setPower(0);
+lr.setPower(0);
+rr.setPower(0);
+}
+
+^^^^PLACE THIS CODE BEFORE THE (@Override- public void runOpMode) function in code
+
+CODE ABOVE IS ONLY FOR AUTONOMOUS' TO MAKE 5 LINES OF CODE FOR ONE MOVEMENT INTO ONE LINE OF CODE: EXAMPLE OF USE AFTER THE (waitForStart()) COMMAND IS BELOW
+
+
+
+CODE EXAMPLE: drive(.5, .5, .5, .5, 5000);  <<< (drive) word can be changed into anyword by changing the word drive in the above public void drive.
+
+^^^WHAT THIS DOES IS IT STARTS OUT BY THE DRIVE WORD WHICH YOU ALWAYS MUST INCLUDE THEN IN THE PARENTHESIS' THERE ARE 4 DECIMAL NUMBERS WHICH ARE YOUR POWERS 
+THAT GO FROM -1 TO 1 FOR MOTOR POWERS, THEN THE LAST NUMBER IS YOUR TIME WHICH IS IN MILLISECONDS SO 5000 IS 5 SECONDS. TIME IS HOW MUCH YOU WANT IT TO 
+GO BEFORE THE MOTORS STOP OR BRAKE, SO AFTER 5 SECONDS THE MOTORS WILL SHUT DOWN OR GO ONTO THE NEXT LINE OF CODE IF YOU HAVE ANY MORE.
+
